@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#150f26">
+  <title>Offline – Earth Jukebox</title>
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/icons/favicon-32.png">
+  <link rel="apple-touch-icon" href="assets/icons/apple-touch-icon.png">
+  <style>
+    :root { color-scheme: dark; }
+    body { margin:0; min-height:100vh; min-height:100dvh; display:grid; place-items:center; padding:1.5rem;
+      padding:max(1.5rem, env(safe-area-inset-top)) max(1.5rem, env(safe-area-inset-right)) max(1.5rem, env(safe-area-inset-bottom)) max(1.5rem, env(safe-area-inset-left));
+      background:#150f26; color:#e9ecef; font-family:system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif; text-align:center; }
+    main { max-width:28rem; }
+    img { width:96px; height:96px; }
+    h1 { color:#8de8ff; font-size:clamp(1.5rem,6vw,2rem); margin:.75rem 0 .5rem; }
+    p { color:#b9aed6; line-height:1.5; }
+    button { margin-top:1rem; padding:.75rem 1.5rem; min-height:44px; border:0; border-radius:.5rem;
+      background:#1fa971; color:#08140f; font-weight:700; font-size:1rem; cursor:pointer; }
+  </style>
+</head>
+<body>
+  <main>
+    <img src="assets/icons/icon-192.png" alt="" width="96" height="96">
+    <h1>You’re offline</h1>
+    <p>Earth Jukebox needs an internet connection to fetch NASA EONET events. The shelf will update when you’re back online.</p>
+    <button type="button" onclick="location.reload()">Try again</button>
+  </main>
+  <script>addEventListener('online', () => location.reload());</script>
+</body>
+</html>
